@@ -1,0 +1,28 @@
+@import "./components/header";
+@import "./components/overlay";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./components/overlay-modal";
+@import "./components/information";
+@import "./components/occupation";
+@import "./components/team";
+@import "./components/customers";
+@import "./components/footer";
+
+@media (min-width:480px) {
+    .container {
+        width: 450px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 740px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}

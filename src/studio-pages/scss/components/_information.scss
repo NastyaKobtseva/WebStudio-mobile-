@@ -1,0 +1,124 @@
+@import "../utils/mixins";
+
+.container {
+    width: 480px;
+    margin: 0 auto;
+}
+
+.information__content {
+    gap: 30px;
+    padding: 94px 0 94px 0;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.information__content-attention {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__attention-photo {
+    padding: 25px 190px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+.information__title {
+    color: #212121;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.information__text {
+    color: #757575;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+}
+
+.information__content-punctuality {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__clock-photo {
+    padding: 25px 190px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+.information__content-planninig {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__planning-photo {
+    padding: 33px 190px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+.information__content-technology {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__astronaut-photo {
+    padding: 25px 190px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+@media (min-width:768px) {
+    .information__content {
+        @include flex-around($display:flex, $j-content:center);
+        text-align: start;
+    }
+    .information__attention-photo {
+        padding: 25px 142px;
+    }
+    .information__clock-photo {
+        padding: 25px 142px;
+    }
+    .information__planning-photo {
+        padding: 33px 142px;
+    }
+    .information__astronaut-photo {
+        padding: 25px 142px;
+    }
+}
+
+@media (min-width:1200px) {
+    .information__attention-photo {
+        padding: 25px 100px;
+    }
+    .information__clock-photo {
+        padding: 25px 100px;
+    }
+    .information__planning-photo {
+        padding: 33px 100px;
+    }
+    .information__astronaut-photo {
+        padding: 25px 100px;
+    }
+}

@@ -1,0 +1,138 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    @include flex-around($display:flex, $j-content:space-around);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header__content {
+    align-items: center;
+    padding: 14px 0 14px 0;
+    @include flex-around($display:flex, $j-content:space-between);
+}
+
+.navigation__list {
+    @include flex-around($display:flex, $j-content:space-around);
+    margin: 0 auto;
+    text-indent: 50px;
+    gap: 10px;
+}
+
+.navigation {
+    @extend %flex-box;
+}
+
+.navigation__list-item {
+    @include flex-around($display:flex, $j-content:space-around);
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+    &:hover {
+        color: #2196F3;
+        fill: #2196F3;
+    }
+}
+
+.navigation__list .navigation__list-item .navigation__list-link {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    position: relative;
+    letter-spacing: 0.28px;
+    line-height: normal;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 3.6px;
+        background-color: #2196F3;
+        bottom: -25px;
+        left: 32px;
+        transform: scaleX(0);
+        border-radius: 5px;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+    &:hover, &.active {
+        color: #2196F3;
+    }
+    &:hover::after, &.active::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.address {
+    @extend %flex-box;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.address__link {
+    text-decoration: none;
+    color: black;
+    fill: #000;
+    @extend %flex-box;
+    gap: 10px;
+    transition: color 0.3s;
+    &:hover {
+        color: #2196F3;
+        fill: #2196F3;
+    }
+}
+
+@media (min-width: 480px) {
+    .header {
+        display: none;
+    }
+    .line {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    .header {
+        @include flex-around($display:flex, $j-content:space-around);
+    }
+    .address {
+        gap: 10px;
+    }
+    .header__content {
+        padding: 26px 0 4px 0;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .line {
+        display: flex;
+    }
+}
+
+@media (min-width:1200px) {
+    .header__content {
+        padding: 26px 0 14px 0;
+        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .address {
+        gap: 30px;
+    }
+}
