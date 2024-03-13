@@ -2,7 +2,7 @@
 @import "../utils/placeholders";
 
 .overlay {
-    background-image: url('.././image/chapter-one/Img.header.png');
+    background-image: url("../image/chapter-one/Img.header.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,5 +81,12 @@
 @media (min-width:1200px) {
     .overlay__title {
         font-size: 46px;
+    }
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .overlay.high-density {
+        background-image: url("../image/chapter-one/Img.header@2x.png");
     }
 }

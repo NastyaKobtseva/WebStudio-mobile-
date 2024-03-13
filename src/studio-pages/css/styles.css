@@ -369,8 +369,7 @@ input[type=checkbox]:checked ~ .social__programs {
     justify-content: space-between;
   }
   .header__content-element {
-    padding: 26px 0 6px 0;
-    display: flex;
+    padding: 4px 0 6px 0;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -382,7 +381,7 @@ input[type=checkbox]:checked ~ .social__programs {
 }
 
 .overlay {
-  background-image: url(".././image/chapter-one/Img.header.png");
+  background-image: url("../image/chapter-one/Img.header.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -460,6 +459,11 @@ input[type=checkbox]:checked ~ .social__programs {
 @media (min-width: 1200px) {
   .overlay__title {
     font-size: 46px;
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlay.high-density {
+    background-image: url("../image/chapter-one/Img.header@2x.png");
   }
 }
 .newsletter__button, .newsletter, .header__content-top, .address, .address__link, .overlay__content {

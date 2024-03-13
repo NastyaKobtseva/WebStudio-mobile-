@@ -334,8 +334,7 @@ li {
         @include flex-around($display:flex, $j-content:space-between);
     }
     .header__content-element {
-        padding: 26px 0 6px 0;
-        display: flex;
+        padding: 4px 0 6px 0;
         align-items: center;
         @include flex-around($display:flex, $j-content:center);
     }
